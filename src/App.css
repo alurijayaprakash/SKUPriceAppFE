@@ -1,0 +1,124 @@
+.sku-lookup-container {
+    max-width: 500px; /* Max width for larger screens */
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #333;
+    color: #eee;
+    text-align: center;
+    margin: 20px; /* Add some margin around the container */
+  }
+  
+  h1 {
+    color: #61dafb; /* React blue */
+    margin-bottom: 25px;
+    font-size: 1.8em;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column; /* Stack input and button on small screens */
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"] {
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: #eee;
+    font-size: 1em;
+    width: 100%; /* Full width within its container */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+  }
+  
+  input[type="text"]::placeholder {
+    color: #bbb;
+  }
+  
+  button {
+    padding: 12px 20px;
+    background-color: #28a745; /* Green for action */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Prevent button from shrinking */
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #218838;
+  }
+  
+  button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+  }
+  
+  .status-message {
+    margin-top: 15px;
+    font-size: 1em;
+    color: #ffc107; /* Yellow for warnings/messages */
+  }
+  
+  .price-display {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #4CAF50; /* A pleasant green for the price */
+    color: white;
+    border-radius: 8px;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 600px) {
+    .input-group {
+      flex-direction: row; /* Layout input and button side-by-side on larger screens */
+      align-items: flex-end; /* Align button to bottom of input */
+      gap: 10px; /* Reduce gap when side-by-side */
+    }
+  
+    label {
+      margin-bottom: 0; /* Remove bottom margin for horizontal layout */
+      text-align: right; /* Align label to the right of input if needed */
+      flex-basis: 120px; /* Give label a fixed width */
+    }
+  
+    input[type="text"] {
+      flex-grow: 1; /* Allow input to take remaining space */
+    }
+  
+    button {
+      width: auto; /* Button can size itself */
+    }
+  }
+  
+  @media (max-width: 480px) {
+      .sku-lookup-container {
+          padding: 15px;
+          margin: 10px;
+      }
+      h1 {
+          font-size: 1.5em;
+      }
+      input[type="text"], button {
+          padding: 10px;
+          font-size: 0.95em;
+      }
+      .price-display {
+          font-size: 1.2em;
+          padding: 10px;
+      }
+  }
